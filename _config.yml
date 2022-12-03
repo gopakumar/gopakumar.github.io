@@ -73,7 +73,7 @@ plugins:
 
 author:
   name   : "Gopakumar Sasi"
-  avatar : "/assets/images/bio-photo.png"
+  #avatar : "/assets/images/bio-photo.png"
   bio    : "Developer."
   links:
     - label: "Website"
