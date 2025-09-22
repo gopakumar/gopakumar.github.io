@@ -55,5 +55,25 @@ pkg: An error occurred while fetching package: No error
 pkg: An error occurred while fetching package: No error
 ```
 
-FIX: working on it
+FIX: make sure the /etc/ssl/ has the following and the cert/link.o are correct.
+eg: 
+```bash
+cat /etc/ssl/certs/002c0b4f.0 show show a certificate
+```
+```bash
+ 0 lrwxr-xr-x   1 root wheel    32 Sep 21 22:01 cert.pem -> ../../usr/local/etc/ssl/cert.pem
+ 4 drwxr-xr-x   2 root wheel  3584 Sep 21 22:04 certs
+```
+```bash
+# ls -als certs
+total 8
+4 drwxr-xr-x  2 root wheel 3584 Sep 21 22:04 .
+4 drwxr-xr-x  5 root wheel  512 Sep 21 22:04 ..
+0 lrwxr-xr-x  1 root wheel   56 Sep 21 22:04 002c0b4f.0 -> ../../../usr/share/certs/trusted/GlobalSign_Root_R46.pem
+0 lrwxr-xr-x  1 root wheel   57 Sep 21 22:04 0179095f.0 -> ../../../usr/share/certs/trusted/BJCA_Global_Root_CA1.pem
+0 lrwxr-xr-x  1 root wheel   78 Sep 21 22:04 02265526.0 -> ../../../usr/share/certs/trusted/Entrust_Root_Certification_Authority_-_
+:
+:
+```
+
 
