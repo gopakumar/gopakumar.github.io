@@ -173,6 +173,21 @@ Example (UniFi UI):
 
 ---
 
+## TFTP in UNAS 
+
+```bash
+apt update
+apt install -y inetutils-inetd tftpd-hpa
+chmod -R 755 /var/nfs/shared/server/tftpboot/
+chown -R tftp:tftp /var/nfs/shared/server/tftpboot/
+#copy required boot files
+scp -r freebsd@192.168.1.249:/b/tftpboot/FreeBSD/arm64/* /var/nfs/shared/server/tftpboot/
+#restart server
+sudo systemctl enable tftpd-hpa
+sudo systemctl restart tftpd-hpa
+```
+
+---
 ## Final Notes
 
 ✅ Root filesystem over NFS (RO)  
