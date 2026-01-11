@@ -59,15 +59,8 @@ Before starting, review the official documentation:
 
 ```bash
 root@UNAS-2:/etc/exports.d# cat shared-*.exports
-
-/var/nfs/shared/server/fbsdbase/fb143 192.168.1.0/24(
-  rw,sync,no_subtree_check,no_root_squash
-)
-
-/var/nfs/shared/server/rwvar/rpi8gig 192.168.1.0/24(
-  rw,sync,no_subtree_check,no_root_squash
-)
-
+/var/nfs/shared/server/fbsdbase/fb143 192.168.1.0/24(rw,sync,no_subtree_check,no_root_squash)
+/var/nfs/shared/server/rwvar/rpi8gig 192.168.1.0/24(rw,sync,no_subtree_check,no_root_squash)
 root@UNAS-2:/etc/exports.d# exportfs -ra
 ```
 
